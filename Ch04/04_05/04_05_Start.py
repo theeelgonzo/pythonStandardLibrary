@@ -18,3 +18,9 @@ class HTMLParser(HTMLParser):
 parser = HTMLParser()
 parser.feed('<html><head><title>Coder</title></head><body><h1><!--hi-->I am a coder</hi></body></html>')
 print()
+
+htmlFile = open('../sampleHTML.html', 'r')
+s = ''
+for line in htmlFile:
+    s += line
+parser.feed(s)
